@@ -1,0 +1,554 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #111;
+    color: white;
+
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00bcd4;
+}
+
+.tagline {
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+
+    padding: 70px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #666;
+
+    font-size: 17px;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 14px 20px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #00bcd4;
+
+    box-shadow:
+        0 0 10px rgba(0, 188, 212, 0.2);
+}
+
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.filters {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: none;
+
+    background: white;
+
+    padding: 10px 22px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #00bcd4;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #00bcd4;
+
+    color: white;
+}
+
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    padding-bottom: 60px;
+}
+
+
+/* =========================
+   GALLERY CARD
+========================= */
+
+.gallery-item {
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Card hover */
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.gallery-item img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+/* Image zoom */
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   IMAGE INFORMATION
+========================= */
+
+.image-info {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding:
+        35px 20px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.85)
+        );
+
+    transform: translateY(10px);
+
+    opacity: 0;
+
+    transition:
+        all 0.4s ease;
+}
+
+
+/* Show information on hover */
+
+.gallery-item:hover .image-info {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.image-info h3 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.image-info p {
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0, 0, 0, 0.92);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1000;
+
+    padding: 30px;
+}
+
+
+/* Open lightbox */
+
+.lightbox.active {
+    display: flex;
+}
+
+
+/* =========================
+   LIGHTBOX CONTENT
+========================= */
+
+.lightbox-content {
+    text-align: center;
+
+    max-width: 900px;
+
+    width: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+
+    max-height: 70vh;
+
+    border-radius: 10px;
+
+    object-fit: contain;
+}
+
+.lightbox-content h2 {
+    color: white;
+
+    margin-top: 18px;
+
+    font-size: 24px;
+}
+
+.lightbox-content p {
+    color: #aaa;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   IMAGE COUNTER
+========================= */
+
+#imageCounter {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ddd;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   LIGHTBOX BUTTONS
+========================= */
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+
+    border: none;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* Button hover */
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+    background: #00bcd4;
+}
+
+
+/* Close */
+
+.close-btn {
+    top: 25px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+
+/* Previous */
+
+.prev-btn {
+    left: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+/* Next */
+
+.next-btn {
+    right: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+
+    .hero {
+        padding-top: 50px;
+    }
+
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-item {
+        height: 250px;
+    }
+
+
+    .prev-btn {
+        left: 10px;
+    }
+
+
+    .next-btn {
+        right: 10px;
+    }
+
+
+    .close-btn {
+        right: 15px;
+
+        top: 15px;
+    }
+
+}

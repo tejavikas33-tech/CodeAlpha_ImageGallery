@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PixelGallery | Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            TEJA'S<span>Gallery</span>
+        </div>
+
+        <p class="tagline">
+            Explore. Discover. Inspire.
+        </p>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="gallery-container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <h1>
+                Discover Beautiful Moments
+            </h1>
+
+            <p>
+                Explore our collection of stunning photographs
+                from nature, animals and cities.
+            </p>
+
+        </section>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search images..."
+            >
+
+        </div>
+
+
+        <!-- Category Filters -->
+        <nav class="filters">
+
+            <button
+                class="filter-btn active"
+                data-category="all">
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="nature">
+                Nature
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="animals">
+                Animals
+            </button>
+
+            <button
+                class="filter-btn"
+                data-category="cities">
+                Cities
+            </button>
+          <button
+    class="filter-btn"
+    data-category="adventure">
+    Adventure
+</button>
+        </nav>
+
+
+        <!-- Gallery -->
+        <section
+            class="gallery"
+            id="gallery">
+
+
+            <!-- Image 1 -->
+            <article
+                class="gallery-item"
+                data-category="nature">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
+                    alt="Beautiful mountain landscape"
+                >
+
+                <div class="image-info">
+
+                    <h3>
+                        Mountain Escape
+                    </h3>
+
+                    <p>
+                        Nature
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Image 2 -->
+            <article
+                class="gallery-item"
+                data-category="nature">
+
+                <img
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80"
+                    alt="Beautiful forest"
+                >
+
+                <div class="image-info">
+
+                    <h3>
+                        Into the Forest
+                    </h3>
+
+                    <p>
+                        Nature
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Image 3 -->
+            <article
+                class="gallery-item"
+                data-category="animals">
+
+                <img
+                    src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1000&q=80"
+                    alt="Wild animal"
+                >
+
+                <div class="image-info">
+
+                    <h3>
+                        Wild Beauty
+                    </h3>
+
+                    <p>
+                        Animals
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Image 4 -->
+            <article
+                class="gallery-item"
+                data-category="animals">
+
+                <img
+                    src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=1000&q=80"
+                    alt="Beautiful animal"
+                >
+
+                <div class="image-info">
+
+                    <h3>
+                        Wild Life
+                    </h3>
+
+                    <p>
+                        Animals
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Image 5 -->
+            <article
+                class="gallery-item"
+                data-category="cities">
+
+                <img
+                    src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1000&q=80"
+                    alt="Modern city buildings"
+                >
+
+                <div class="image-info">
+
+                    <h3>
+                        City Lights
+                    </h3>
+
+                    <p>
+                        Cities
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Image 6 -->
+            <article
+                class="gallery-item"
+                data-category="cities">
+
+                <img
+                    src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1000&q=80"
+                    alt="Beautiful city view"
+                >
+
+                <div class="image-info">
+
+                    <h3>
+                        Urban Life
+                    </h3>
+
+                    <p>
+                        Cities
+                    </p>
+
+                </div>
+
+            </article>
+            <!-- Adventure 1 -->
+<article
+    class="gallery-item"
+    data-category="adventure">
+
+    <img
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
+        alt="Mountain adventure">
+
+    <div class="image-info">
+
+        <h3>
+            Mountain Adventure
+        </h3>
+
+        <p>
+            Adventure
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- Adventure 2 -->
+<article
+    class="gallery-item"
+    data-category="adventure">
+
+    <img
+        src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=80"
+        alt="Hiking adventure">
+
+    <div class="image-info">
+
+        <h3>
+            Hiking Journey
+        </h3>
+
+        <p>
+            Adventure
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- Adventure 3 -->
+<article
+    class="gallery-item"
+    data-category="adventure">
+
+    <img
+        src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?auto=format&fit=crop&w=1000&q=80"
+        alt="Adventure travel">
+
+    <div class="image-info">
+
+        <h3>
+            Into the Wild
+        </h3>
+
+        <p>
+            Adventure
+        </p>
+
+    </div>
+
+</article>
+
+        </section>
+
+    </main>
+
+
+    <!-- Lightbox -->
+    <div
+        class="lightbox"
+        id="lightbox">
+
+
+        <!-- Close -->
+        <button
+            class="close-btn"
+            id="closeBtn">
+            &times;
+        </button>
+
+
+        <!-- Previous -->
+        <button
+            class="prev-btn"
+            id="prevBtn">
+            &#10094;
+        </button>
+
+
+        <!-- Lightbox Content -->
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt=""
+            >
+
+            <h2
+                id="lightboxTitle">
+            </h2>
+
+            <p
+                id="lightboxCategory">
+            </p>
+
+            <span
+                id="imageCounter">
+                1 / 1
+            </span>
+
+        </div>
+
+
+        <!-- Next -->
+        <button
+            class="next-btn"
+            id="nextBtn">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
